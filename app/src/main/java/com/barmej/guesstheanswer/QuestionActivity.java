@@ -44,8 +44,8 @@ public class QuestionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
-        String appLang = sharedPreferences.getString("app_lang","");
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_PREF, MODE_PRIVATE);
+        String appLang = sharedPreferences.getString(Constants.APP_LANG,"");
         if (!appLang.equals(""))
             LocaleHelper.setLocale(this,appLang);
 
